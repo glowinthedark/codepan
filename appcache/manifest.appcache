@@ -1,0 +1,17 @@
+CACHE MANIFEST
+#ver:9d6c1d60c3be9da2afc26833525769ecd8a8ea25
+#plugin:4.9.0
+
+CACHE:
+/codepan/
+/codepan/client.js
+/codepan/client.css
+/codepan/vendor.js
+/codepan/vendor.css
+/codepan/editor-page.chunk.js
+
+NETWORK:
+*
+
+FALLBACK:
+/ /

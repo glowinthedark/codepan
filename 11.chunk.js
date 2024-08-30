@@ -1,0 +1,3 @@
+webpackJsonp([11],{116:/*!*******************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/boilerplates/vue/codepan.js ***!
+  \*******************************************************************//*! dynamic exports provided *//*! all exports used */function(a){a.exports="const { createApp, h, ref } = Vue\n\nconst app = createApp({\n  setup() {\n    const count = ref(0)\n    const inc = () => count.value++\n    const dec = () => count.value--\n    return {\n      count,\n      inc,\n      dec\n    }\n  }\n})\n\napp.mount('#app')\n"}});
