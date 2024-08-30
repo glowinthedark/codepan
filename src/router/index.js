@@ -14,22 +14,22 @@ const router = new Router({
   routes: [
     {
       name: 'home',
-      path: '/',
+      path: '/codepan',
       component: EditorPage
     },
     {
       name: 'gist',
-      path: '/gist/:gist',
+      path: '/codepan/gist/:gist',
       component: EditorPage
     },
     {
       name: 'boilerplate',
-      path: '/boilerplate/:boilerplate',
+      path: '/codepan/boilerplate/:boilerplate',
       component: EditorPage
     },
     {
       name: 'github-success',
-      path: '/github_success',
+      path: '/codepan/github_success',
       component: GitHubSuccess
     },
     {

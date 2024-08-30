@@ -2,7 +2,8 @@
 
 
 build:    ##  Run yarn build by default
-	yarn build
+
+	npm run build
 
 
 start:    ##  Start the development server

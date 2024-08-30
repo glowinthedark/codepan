@@ -2,7 +2,7 @@
   <div class="page not-found">
     <h1>404</h1>
     <p>
-      <router-link to="/" class="go-home">Return to Home Page</router-link>
+      <router-link to="/codepan" class="go-home">Return to Home Page</router-link>
     </p>
   </div>
 </template>

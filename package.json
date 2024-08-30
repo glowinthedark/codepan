@@ -5,8 +5,8 @@
   "description": "Play with JS/CSS/HTML so simple it hurts",
   "details": "CodePan is where people prototype front-end apps, you are free to use it offline anytime anywhere.",
   "main": "src/index.js",
-  "homepage": "https://codepan.xhumanoid.com/",
-  "version": "0.1.0",
+  "homepage": "https://glowinthedark.github.io/codepan/",
+  "version": "0.2.0",
   "repository": {},
   "scripts": {
     "test": "npm run lint",
@@ -66,6 +66,7 @@
     "poi-preset-babel-minify": "^1.0.3",
     "poi-preset-bundle-report": "^2.0.1",
     "poi-preset-offline": "^9.0.3",
+    "babel-preset-poi": "^1.1.2",
     "raw-loader": "^0.5.1",
     "repo-latest-commit": "^1.0.0",
     "stylus": "^0.54.5",

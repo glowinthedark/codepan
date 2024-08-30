@@ -28,7 +28,7 @@ module.exports = {
     sourceMap: false
   },
   hash: false,
-  homepage: '/',
+  homepage: '/codepan',
   env: Object.assign({
     VERSION: `v${pkg.version}-${repoLatestCommit().commit.slice(0, 7)}`,
     LATEST_COMMIT: repoLatestCommit().commit.slice(0, 7)
