@@ -19,8 +19,8 @@
             
           - name: 'store Artifact'
             uses: actions/upload-artifact@v4
-              with:
-              name: dist
+            with:
+              name: upload dist
               path: dist
               retention-days: 90
           - name: Deploy to GitHub Pages
@@ -28,6 +28,5 @@
             with:
               branch: gh-pages
               folder: dist
-              force: true 
-
-          command: yarn test
+              force: true
+              
