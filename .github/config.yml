@@ -1,24 +1,33 @@
-version: 2
-jobs:
-  build:
-    working_directory: ~/github/codepan
-    docker:
-      - image: circleci/node:8.0.0
-    branches:
-      ignore:
-        - gh-pages # list of branches to ignore
-        - /release\/.*/ # or ignore regexes
-    steps:
-      - checkout
-      - restore_cache:
-          key: dependency-cache-{{ checksum "yarn.lock" }}
-      - run:
-          name: install dependences
-          command: yarn
-      - save_cache:
-          key: dependency-cache-{{ checksum "yarn.lock" }}
-          paths:
-            - ./node_modules
-      - run:
-          name: test
+  name: vue build
+  on:
+    push:
+      branches:
+        - master
+  jobs:
+    gh-pages-deploy:
+      name: Deploying to Github Pages
+      runs-on: ubuntu-latest
+      steps:
+          - uses: actions/checkout@v4
+          - name: Use Node.js 
+            uses: actions/setup-node@v4
+            with:
+              node-version: 18
+              cache: yarn
+          - name: yarn
+            run: yarn
+            
+          - name: 'store Artifact'
+            uses: actions/upload-artifact@v4
+              with:
+              name: dist
+              path: dist
+              retention-days: 90
+          - name: Deploy to GitHub Pages
+            uses: actions/deploy-pages@v4
+            with:
+              branch: gh-pages
+              folder: dist
+              force: true 
+
           command: yarn test
