@@ -3,6 +3,10 @@
     push:
       branches:
         - master
+  permissions:
+    contents: read
+    pages: write
+    id-token: write
   jobs:
     gh-pages-deploy:
       name: Deploying to Github Pages
