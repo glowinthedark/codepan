@@ -7,8 +7,13 @@
     contents: read
     pages: write
     id-token: write
+
   jobs:
     gh-pages-deploy:
+      # see: https://github.com/actions/deploy-pages
+      environment:
+        name: github-pages
+        url: ${{ steps.deployment.outputs.page_url }} 
       name: Deploying to Github Pages
       runs-on: ubuntu-latest
       steps:
